@@ -21,3 +21,7 @@ class SsulModel(TimeStampedModel):
     like_count = models.IntegerField(default=0)
     report_count = models.IntegerField(default=0)
     view_count = models.IntegerField(default=0)
+
+
+class PopularSsul(TimeStampedModel):
+    id = models.AutoField(primary_key=True)

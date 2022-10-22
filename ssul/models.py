@@ -4,9 +4,14 @@ from inheritance.models import TimeStampedModel
 # Create your models here.
 
 
-class Category(models.Model):
-    id = models.AutoField(primary_key=True)
+class SsulCategory(models.Model):
     category = models.CharField(max_length=20)
+
+
+class SsulCategoryCount(models.Model):
+    category = models.ForeignKey(SsulCategory, on_delete=models.CASCADE)
+    category_count = models.IntegerField(default=0)
+    active = models.BooleanField(default=True)
 
 
 class SsulModel(TimeStampedModel):

@@ -6,6 +6,9 @@ from django.contrib.auth.models import AbstractUser
 class CustomUser(AbstractUser):
     nickname = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.nickname
+
     def create(data):
         if CustomUser.exist(data):
             user_object = CustomUser()

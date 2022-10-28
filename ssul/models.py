@@ -8,7 +8,7 @@ from user.models import CustomUser
 class SsulModel(TimeStampedModel):
     id = models.AutoField(primary_key=True)
     user = models.ForeignKey(
-        CustomUser, on_delete=models.SET_DEFAULT, default='테스트')
+        CustomUser, on_delete=models.SET_DEFAULT, default=1)
     category = models.CharField(max_length=20, default='기타')
     contents = models.CharField(max_length=1000)
     left_option = models.CharField(max_length=20)

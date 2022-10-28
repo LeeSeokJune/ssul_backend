@@ -9,8 +9,8 @@ from user.models import CustomUser
 @api_view(['POST'])
 def register_ssul(request):
     if request.method == 'POST':
-        print('register_ssul')
-        return Response('asdf')
+        print(request.data)
+        return Response('hihi')
 
 
 @api_view(['POST'])
